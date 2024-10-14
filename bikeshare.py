@@ -127,14 +127,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # display total travel time
+    # display total travel and mean travel time
     total_travel_time = df['Trip Duration'].sum()
-    print("Total travel time :", total_travel_time)
-
-    # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
-    print("Mean travel time :", mean_travel_time)
-
+    print("Total travel time : {}\nMean travel time : {}".format(total_travel_time, mean_travel_time))
+    
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -161,13 +158,11 @@ def user_stats(df):
         birth_year = df['Birth Year']
         # the most earliest birth year
         earliest_year = birth_year.min()
-        print("The most earliest birth year:", earliest_year)
         # the most recent birth year
         most_recent = birth_year.max()
-        print("The most recent birth year:", most_recent)
         # the most common birth year
         most_common_year = birth_year.mode()[0]
-        print("The most common birth year:", most_common_year)
+        print("The most earliest birth year: {}\nThe most recent birth year: {}\nThe most common birth year: {}".format(earliest_year, most_recent, most_common_year))
     else:
         print("There is no 'Birth Year' column")
         
