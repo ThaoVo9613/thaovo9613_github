@@ -176,7 +176,7 @@ def user_stats(df):
 
     
 def display_row_data(df):
-    """Displays 5 rows of data from the csv file for the selected city."""
+    """Displays rows of data from the csv file for the selected city."""
     
     # list of user responses
     user_response_list = ['yes', 'no']
