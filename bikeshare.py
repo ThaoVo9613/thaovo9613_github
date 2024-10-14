@@ -161,13 +161,11 @@ def user_stats(df):
         birth_year = df['Birth Year']
         # the most earliest birth year
         earliest_year = birth_year.min()
-        print("The most earliest birth year:", earliest_year)
         # the most recent birth year
         most_recent = birth_year.max()
-        print("The most recent birth year:", most_recent)
         # the most common birth year
         most_common_year = birth_year.mode()[0]
-        print("The most common birth year:", most_common_year)
+        print("The most earliest birth year: {}\nThe most recent birth year: {}\nThe most common birth year: {}".format(earliest_year, most_recent, most_common_year))
     else:
         print("There is no 'Birth Year' column")
         
